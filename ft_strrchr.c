@@ -6,7 +6,7 @@
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 17:46:35 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/08 15:35:46 by jerdos-s         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:14:22 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*current;
 
-	current = (char *)s + ft_strlen(current);
-	while (*current != c)
+	current = (char *)s + ft_strlen((char *)s);
+	while (*current != (char)c)
 	{
 		if (current == s)
 			return (NULL);

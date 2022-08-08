@@ -1,9 +1,7 @@
 NAME = libft.a
 CFLAG = -Wall -Wextra -Werror
-OPTION = -I ./libft.h -c
-SRC_PATH = ./ 
-SRCS = $(addprefix $(SRC_PATH), $(SRC))
-OBJS = $(SRCS:.c=.o)
+OPTION = -I./ -c
+SRC_PATH = ./
 SRC =	ft_atoi.c \
 	ft_bzero.c \
 	ft_isalnum.c \
@@ -25,15 +23,24 @@ SRC =	ft_atoi.c \
 	ft_strnstr.c \
 	ft_strrchr.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	ft_calloc.c \
+	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c
+
+
+SRCS = $(addprefix $(SRC_PATH),$(SRC))
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 .c.o:
-	gcc $(CFLAGS) $(OPTIONS) $(<) -o $(<:.c=.o)
+	gcc $(CFLAG) $(OPTION) $(<) -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJS)
@@ -42,3 +49,4 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
