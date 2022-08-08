@@ -6,13 +6,13 @@
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 18:51:31 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/06 19:29:22 by jerdos-s         ###   ########.fr       */
+/*   Updated: 2022/08/08 13:57:24 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

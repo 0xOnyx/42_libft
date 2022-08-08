@@ -6,11 +6,11 @@
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:56:34 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/07 01:35:25 by jerdos-s         ###   ########.fr       */
+/*   Updated: 2022/08/08 15:36:08 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

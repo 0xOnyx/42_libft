@@ -6,11 +6,11 @@
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 17:46:35 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/07 19:40:14 by jerdos-s         ###   ########.fr       */
+/*   Updated: 2022/08/08 15:35:46 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

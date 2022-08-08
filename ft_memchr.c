@@ -6,13 +6,13 @@
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 21:25:22 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/07 21:29:50 by jerdos-s         ###   ########.fr       */
+/*   Updated: 2022/08/08 14:13:25 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*current;
