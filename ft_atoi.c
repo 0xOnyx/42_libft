@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/06 20:11:14 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/07 19:36:15 by jerdos-s         ###   ########.fr       */
+/*   Created: 2022/08/08 12:38:39 by jerdos-s          #+#    #+#             */
+/*   Updated: 2022/08/08 12:39:55 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
-
-void	*memcpy(void *dest, const void *src, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t			i;
-	unsigned char	*dest_char;
-	unsigned char	*src_char;
+	int	res;
+	char	*current;
 
-	if (!dest || !src)
-		return (NULL);
-	i = 0;
-	dest_char = (unsigned char *)dest;
-	src_char = (unsigned char *)src;
-	while (i < n)
-	{
-		dest_char[i] = src_char[i];
-	}
-	return (dest);
+	res = 0;
+	current = (char *)nptr;
+	while ()
+
 }

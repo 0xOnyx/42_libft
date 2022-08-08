@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/06 20:11:14 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/07 19:36:15 by jerdos-s         ###   ########.fr       */
+/*   Created: 2022/08/08 12:36:12 by jerdos-s          #+#    #+#             */
+/*   Updated: 2022/08/08 12:38:15 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t			i;
-	unsigned char	*dest_char;
-	unsigned char	*src_char;
+	size_t	i;
+	size_t	j;
 
-	if (!dest || !src)
-		return (NULL);
 	i = 0;
-	dest_char = (unsigned char *)dest;
-	src_char = (unsigned char *)src;
-	while (i < n)
+	while (i < len && big[i] != '\0')
 	{
-		dest_char[i] = src_char[i];
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
+			j++;
+		if (little[j] == '\0')
+			return ((char *)big + j + i);
+		i++;
 	}
-	return (dest);
+	return (0);
 }
