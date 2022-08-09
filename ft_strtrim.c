@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 22:02:12 by jerdos-s          #+#    #+#             */
-/*   Updated: 2022/08/09 15:41:00 by jerdos-s         ###   ########.fr       */
+/*   Created: 2022/08/09 15:46:27 by jerdos-s          #+#    #+#             */
+/*   Updated: 2022/08/09 16:27:11 by jerdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	ft_is_from_charset(char c, char const *charset)
 {
-	char	*res;
 	size_t	i;
-	size_t	j;
-	size_t	len_str;
 
 	i = 0;
-	j = 0;
-	len_str = ft_strlen(s);
-	if (start > len_str)
-		len = 0;
-	else if (len >= len_str)
-		len = len_str - start;
-	res = (char *)ft_calloc(sizeof(char), len + 1);
-	if (!res)
-		return (NULL);
-	while (s[i])
+	while (charset[i] != '\0')
 	{
-		if (i >= start && j < len)
-			res[j++] = s[i];
+		if (charset[i] == c)
+			return (1);
 		i++;
 	}
-	res[j] = '\0';
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*res;
+	size_t	min;
+	size_t	max;
+
+	min = 0;
+	while (ft_is_from_charset(s1[min], set) && s1[min] != '\0')
+		min++;
+	max = ft_strlen(s1);
+	while (ft_is_from_charset(s1[max - 1], set) && max - 1 > 0)
+		max--;
+	res = ft_substr(s1, min, max - min);
 	return (res);
 }
