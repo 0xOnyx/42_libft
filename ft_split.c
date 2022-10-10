@@ -67,6 +67,8 @@ char	**ft_split(char const *s, char c)
 
 	len = max_len(s, c);
 	res = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!res)
+		return (NULL);
 	fill_tab(res, s, c);
 	res[len] = NULL;
 	return (res);
