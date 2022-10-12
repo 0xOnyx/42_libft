@@ -63,7 +63,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/jerdos-s/prog/42_libft/Makefile",
+    "last_opened_file_path": "/Users/jerdos-s/prog/42_libft",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "structure.view.defaults.are.configured": "true"
@@ -104,6 +104,7 @@
       <workItem from="1665401365732" duration="1249000" />
       <workItem from="1665403361574" duration="626000" />
       <workItem from="1665410238223" duration="4626000" />
+      <workItem from="1665487393137" duration="3864000" />
     </task>
     <servers />
   </component>
